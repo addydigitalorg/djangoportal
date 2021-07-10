@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign Up {% endblock title %}
+
+{% block body %}
+    <div class="container ">
+    <!--Contact heading-->
+    <h2 class="h1 m-0 text-center">User Sign Up</h2>
+    <div class="row ">
+
+      <div class="col-md-6 offset-md-3">
+        <form id="signup-form" method="POST" action="signup" role="form" novalidate>
+            {% csrf_token %}
+
+
+            {% for fm in forms %}
+
+              <div class="form-group">
+                <label for="username" class="font-weight-bold">{{ fm.label }}</label>
+                {{ fm }}
+
+                  <div class="help-block with-errors text-danger">{{ fm.errors|striptags }}</div>
+              </div>
+
+            {% endfor %}
+
+            <div class="row justify-content-center">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+        </form>
+
+        <!-- Login -->
+        <p class="text-center m-3">Already member?
+          <a href="{% url 'login' %}">Login</a>
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock body %}
+
+
+
+
+
+

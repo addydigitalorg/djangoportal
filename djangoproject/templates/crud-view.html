@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}Crud-View{% endblock title %}
+
+
+{% block body %}
+
+    
+<div class="container ">
+    <!--Contact heading-->
+    <h2 class="h1 m-0 text-center">Manage View</h2>
+
+    <div class="bs-example m-3 text-center">
+        <h2 class="h3 text-left">Search</h2>
+        <form class="form-inline" action="{% url 'crud-view' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group mr-2">
+                <label class="sr-only" for="emp_no">Employee Code</label>
+                <input type="text" class="form-control" id="emp_no" name="emp_no" placeholder="Employee Code" value="{% if filter.emp_no is not None %}  {{ filter.emp_no }} {% endif %}">
+            </div>
+            <div class="form-group mr-2">
+                <label class="sr-only" for="emp_no">Employee Name</label>
+                <input type="text" class="form-control" id="full_name" name="full_name" placeholder="Employee Name" value="{% if filter.full_name is not None %}  {{ filter.full_name }} {% endif %}">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+
+    <div class="row ">
+        <h4 class="primary-colorm m-2 text-center">List Count - {{ row_count }}</h4>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="align-center text-nowrap">Employee Id</th>                         
+                        <th class="align-center text-nowrap">Employee Name</th>                         
+                        <th class="align-center text-nowrap">Birth Date</th>                         
+                        <th class="align-center text-nowrap">Gender</th>                         
+                        <th class="align-center text-nowrap">Hired Date</th>                            
+                    </tr>
+                </thead>
+                <tbody>
+                
+                {% if row_count > 0 %}
+                    {% for data in datas %}
+                    <tr>
+                        <td class="align-left text-nowrap">{{ data.emp_no }}</td>
+                        <td class="align-left text-nowrap">{{ data.full_name }}</td>
+                        <td class="align-left text-nowrap">{{ data.birth_date|date:'d-m-Y' }}</td>
+                        <td class="align-left text-nowrap">{{ data.gender }}</td>
+                        <td class="align-left text-nowrap">{{ data.hire_date|date:'d-m-Y' }}</td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="6"><p style="text-align: center;font-style:italic;color: #da5548;">No Data Found</p></td>
+                    </tr>
+                {% endif %}
+            </tbody>
+            </table>
+
+            {% if datas.has_other_pages %}
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        {% if datas.has_previous %}
+                        <li class="page-item"><a class="page-link" href="?page={{ datas.previous_page_number }}">&laquo;</a></li>
+                        {% else %}
+                        <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
+                        {% endif %}
+                        {% for i in datas.paginator.page_range %}
+                        {% if datas.number == i %}
+                            <li class="page-item active"><span class="page-link">{{ i }} <span class="page-link sr-only">(current)</span></span></li>
+                        {% else %}
+                            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                        {% if datas.has_next %}
+                        <li class="page-item"><a class="page-link" href="?page={{ datas.next_page_number }}">&raquo;</a></li>
+                        {% else %}
+                        <li class="page-item disabled"><span>&raquo;</span></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            {% endif %}
+
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+    
+{% endblock body %}
+    
+    
