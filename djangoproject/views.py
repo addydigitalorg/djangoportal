@@ -6,7 +6,9 @@ from .forms import SignUpForm, LoginForm
 from django.contrib.auth import authenticate, login, logout
 from django.db import connection
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
+import pandas as pd
+import numpy as np
+from pathlib import Path
 # Create your views here.
 
 
@@ -90,7 +92,12 @@ def balance_sheet(request):
 		message = request.POST.get('message')
 		messages.success(request, 'Your message has been sent.')
 
-	return render(request, 'balance_sheet.html')
+		df_balance_sheet_out = pd.read_csv(r'static/master_balance_sheet.csv')
+		df_balance_sheet_out
+		my_dict= {
+			'df':df_balance_sheet_out.html()
+		}
+	return render(request, 'balance_sheet.html', my_dict)
 	# return HttpResponse('This is balance_sheet us page.')
 
 

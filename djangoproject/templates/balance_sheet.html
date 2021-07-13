@@ -12,27 +12,79 @@
         <form id="balance_sheet-form" method="POST" action="balance_sheet" role="form">
             {% csrf_token %}
         <div class="messages"></div>
-
+        {{df|safe}}
         <div class="controls">
-
+          <input type="button" onclick="generate()" value="Export To PDF" /> 
           <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <input id="form_name" type="file" name="fname" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-                <div class="help-block with-errors"></div>
-              <input type="submit" class="btn btn-success btn-send" value="Upload">
-
-              </div>
+            <div class="col-md-12">
+              <table  id="simple_table" class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
         </div>
-
+        <input type="button" onclick="generate()" value="Export To PDF" /> 
         </form>
 
       </div>
 
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script> 
+    <script type="text/javascript">  
+      function generate() {  
+          var doc = new jsPDF('p', 'pt', 'letter');  
+          var htmlstring = '';  
+          var tempVarToCheckPageHeight = 0;  
+          var pageHeight = 0;  
+          pageHeight = doc.internal.pageSize.height;  
+          margins = {  
+              top: 150,  
+              bottom: 60,  
+              left: 40,  
+              right: 40,  
+              width: 600  
+          };  
+          var y = 20;  
+          doc.setLineWidth(2);  
+          doc.text(200, y = y + 30, "Balance Sheet Summary");  
+          doc.autoTable({  
+              html: '#simple_table',  
+              startY: 70,  
+              theme: 'grid',   
+              styles: {  
+                  minCellHeight: 40  
+              }  
+          })  
+          doc.save('balance_sheet.pdf');  
+      }  
+      </script>  
   </div>
 
 {% endblock body %}

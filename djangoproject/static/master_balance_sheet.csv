@@ -1,0 +1,94 @@
+,BALANCE SHEET ,COMPANY NAME,,
+,Transposed from Submitted Financial Statement,,,
+,,,,
+,Currency,Audited,Audited,Comments
+,,2018,2017,
+,,,,
+A,ASSETS,,,OVERALL GUIDELINE - PLEASE DO NOT CHANGE THIS FORMAT
+,,,,
+I,NON CURRENT ASSETS,,,
+,,,,
+,Fixed Assets,0,,
+(a),"Property, Plant and Equipment",,,Land and buildings + Plant and Machinery + Immovable Assets + Fixed Assets
+(b),Capital Work in Progress,,,Exact value from Financial Statement
+(c),Office Equipment/ Other Assets,,,Furniture + Office Equipment + Computers + Vehicles + Catchall bucket for other items
+(d),Right of use assets / Leased assets,,,Exact value from Financial Statement
+,,,,
+,Intangible Assets,0,,
+(e),Goodwill,,,Brand value + Trademark + Goodwill on acquisition
+(f),Other Intangible Assets,,,Technical know how + Product development + Research costs capitalised + Software
+,,,,
+(g),Investments and loans to related parties ,,,
+,"(i) Investments in subsidiaries, joint ventures and associates",,,"Equity investments, Preferance shares etc."
+,"(ii) Loans to subsidiaries, joint ventures and associates",,,"Loans, dues and advances to related parties. + Intercorporate deposits"
+,,,,
+(h),Financial Assets,0,,
+,(i) Investments (other than related parties),,,"Non current investments including unquoted equity, preferance shares, real estate"
+,(ii) Loans (other than related parties),,,"Loans, dues and advances to employees; loans to external parties"
+,(iii) Other financial assets,,,Security deposits + Lease receivables + Interest receivables + Dues from employees + Derivatives + Catch all bucket for other items
+,,,,
+(i),Non current assets,,,Catch all bucket for other items
+(j),Deferred tax assets,,,Deferred tax asset + Income tax asset 
+(k),Other non-current assets,,,Capital Advances + Prepaid expenses + Balances with Govt authorities
+,,,,
+,Total non current assets,0,,
+,,,,
+,,,,
+II,CURRENT ASSETS,,,
+,,,,
+(a),Inventories,,,Raw materials + Goods in Transit + Work In Progress + Finished goods + Stock in trade + Stores and spares + Consumables 
+,,,,
+(b),Financial Assets,0,,
+,(i) Investments,,,Quoted investments + Marketable securities + Mutual Funds
+,(ii) Trade receivables,,,Trade / Account Receivables + Inter-company Receivables + Acceptances
+,(iii) Cash and cash equivalents,,,Bank balances + Cash in hand
+,(iv) Bank balances other than (iii) above,,,Bank deposits + Margin money + Earnest money deposit + Unclaimed dividend 
+,(v) Loans and advances,,,Advances to suppliers + Prepaid expenses + Dues from employees 
+,(vi) Other financial assets (short term),,,Interest accrued + Insurance claims + Catch all bucket for other items + Derivatives + Financial Instruments
+,,,,
+(c),Other current assets,,,Recoveries from suppliers + Refunds + Prepayment to suppliers + Prepaid expenses + Govt subsidy / incentives + Catch all bucket for other items 
+,,,,
+,Total Current Assets,0,,
+,,,,
+,TOTAL ASSETS,0,,
+,,,,
+,,,,
+,,,,
+,,,,
+B,LIABILITIES ,,,
+,,,,
+I,SHAREHOLDERS' EQUITY,,,
+,Equity share capital,,,Authorised share capital + Preferance shares
+,Other equity,,,Capital reserve + Share premium + Amalgamation reserve + General reserve + Retained earnings + Catch all bucket for other items
+,,,,
+,,,,
+II,CURRENT AND NON CURRENT LIABILITIES,,,
+,,,,
+1,Non Current Liabilities,,,
+,,,,
+(a),Financial liabilities,,,
+,(i) Borrowings/ Long Term Debt,,,Secured term loans + Unsecured term loans + Commercial paper
+,(ii) Lease Liabilities,,,Lease liabilities for operating leases + Rental payments for non-operating leases + Non-current lease liabilities
+,(iii) Other financial liabilities,,,Advance from customers 
+(b),Provisions,,,Employee benefits + Warranties Provisions that are not short term - input only if shown in Balance Sheet
+(c),Deferred tax liabilities,,,Deferred tax + Deferred Income tax 
+(d),Other non current liabilities,,,Catch all bucket for all other non current liabilities
+,,,,
+,Total Non Current Liabilities,,,
+,,,,
+,,,,
+2,Current Liabilities,,,
+,,,,
+(a),Financial liabilities,,,
+,(i) Trade payables ,,,Account Payables + Acceptances
+,      (ii) Short Term Borrowings / Line of Credit / Short Term Debt,,,
+,      (iii) Current Portion Long Term Debt,,,
+,(iv) Other financial liabilities,,,"Interest accrued + Deposits + retention money + Derivatives + Unpaid Dividends, deposits, debentures etc + Catch all for other items"
+,,,,
+,Other Current Liabilities,,,
+(b),Deferred Income,,,Deferred revenue + Deferred income + Advance payment by customers + Revenue earned but not received
+(c),Provisions (current),,,Employee benefits + Warranty
+(d),Current tax liabilities,,,Tax liabilities due in the current year - input as per Financial Statement
+(e),Other current liabilities,,,Catch all bucket for all other current liabilities
+,,,,
+,TOTAL EQUITY AND LIABILITIES,,,
